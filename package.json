@@ -1,0 +1,16 @@
+{
+  "name": "cart-super-coffe",
+  "version": "1.0.0",
+  "main": "src/js/scripts.js",
+  "author": "deigo-lps <diego.lopes0909@gmail.com>",
+  "license": "none",
+  "private": true,
+  "dependencies": {
+    "browserify": "^17.0.1",
+    "esmify": "^2.1.1",
+    "terser": "^5.43.1"
+  },
+  "scripts": {
+    "build": "browserify ./src/js/scripts.js -o cart-lps.min.js -p esmify && terser cart-lps.min.js -o cart-lps.min.js"
+  }
+}
