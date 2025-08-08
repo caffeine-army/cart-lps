@@ -34,7 +34,7 @@ ex:
 <button cart-button></button>
 ```
 
-## Parametros
+## Parâmetros
 
 A função lpCart recebe um objeto com as seguintes chaves:
 
