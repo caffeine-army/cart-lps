@@ -1,6 +1,7 @@
 import { getCoupons, getProducts } from "./appData.js";
 import getApiEndpoint from "./getApiEndpoint.js";
 import toggleLoading from "./toggleLoading.js";
+import fireAddedToCart from "./tripleWhale/fireAddedToCart.js";
 
 const isValid = () => {
   const cards = document.querySelectorAll(".cart__product");
@@ -46,6 +47,7 @@ const handlePurchase = async () => {
       }),
     });
     const urlParams = new URLSearchParams(window.location.search);
+    fireAddedToCart({products})
     const data = await response.json();
     window.location.href = `${data.data.cartCreate.cart.checkoutUrl}?${urlParams}`;
   } catch (e) {

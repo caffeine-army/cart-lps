@@ -11,6 +11,7 @@ import handleNoCartProducts from "./modules/handleNoCartProducts.js";
 import handlePurchase from "./modules/handlePurchase.js";
 import openCart from "./modules/openCart.js";
 import toggleLoading from "./modules/toggleLoading.js";
+import firePageLoad from "./modules/tripleWhale/firePageLoad.js";
 import updateCartQuantity from "./modules/updateCartQuantity.js";
 
 const lpCart = async (properties) => {
@@ -52,6 +53,7 @@ const lpCart = async (properties) => {
       });
     });
     toggleLoading();
+    firePageLoad();
     handleCookieBanner();
   } catch (e) {
     console.error(e);
