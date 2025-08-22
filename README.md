@@ -62,6 +62,8 @@ A função lpCart recebe um objeto com as seguintes chaves:
   cada chave será o id de algum botão
   - products [array de objetos]
   - couponCode [string]
+- loadingIcon [string] (opcional)
+  svg. fallback é o ícone do super coffee
 
 Exemplo com todos os parâmetros (não da pra ter bump product e quantity ao mesmo tempo)
 

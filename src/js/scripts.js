@@ -1,4 +1,4 @@
-import { getData, getInCartContainer, resetCoupons, resetProducts, setCoupons } from "./modules/appData.js";
+import { getData, getInCartContainer, resetCoupons, resetProducts, setCoupons, setLoadingIcon } from "./modules/appData.js";
 import createCart from "./modules/createCart.js";
 import createProducts from "./modules/createProducts/createProducts.js";
 import fetchProducts from "./modules/fetchProducts.js";
@@ -21,8 +21,10 @@ const lpCart = async (properties) => {
     }
   });
   try {
-    const { products, customButtons, bump, noCart } = properties;
-    
+    const { products, customButtons, bump, noCart, loadingIcon } = properties;
+
+    if (loadingIcon) setLoadingIcon(loadingIcon);
+
     toggleLoading();
     await fetchProducts([...products, ...(bump?.ids || [])]);
 

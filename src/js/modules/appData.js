@@ -1,4 +1,5 @@
 let products = {};
+let loadingIcon;
 let data = {};
 let coupons = [];
 let cartWrapper;
@@ -52,4 +53,7 @@ const removeProductVariant = ({ product, variant }) => {
 };
 const resetProducts = () => (products = {});
 
-export { setData, getData, setCartWrapper, getCartWrapper, setInCartContainer, getInCartContainer, setBumpContainer, getBumpContainer, setProduct, getProducts, setEmptyProduct, setMultiProduct, setProductQuantity, getProductQuantity, removeProductVariant, setProductAsBump, removeProductAsBump, setCoupons, getCoupons, removeCoupon, resetCoupons, resetProducts };
+const setLoadingIcon = (icon) => (loadingIcon = icon);
+const getLoadingIcon = () => loadingIcon;
+
+export { setData, getData, setCartWrapper, getCartWrapper, setInCartContainer, getInCartContainer, setBumpContainer, getBumpContainer, setProduct, getProducts, setEmptyProduct, setMultiProduct, setProductQuantity, getProductQuantity, removeProductVariant, setProductAsBump, removeProductAsBump, setCoupons, getCoupons, removeCoupon, resetCoupons, resetProducts, setLoadingIcon, getLoadingIcon };
