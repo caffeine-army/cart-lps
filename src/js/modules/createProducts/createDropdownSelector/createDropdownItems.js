@@ -26,8 +26,10 @@ const createDropdownItems = ({ product, image, dropdownText, dropdownVariantsWra
 
     input.addEventListener("change", () => {
       setProduct({ product, variant });
-      image.src = variant.image.url;
-      image.alt = variant.title;
+      if (image) {
+        image.src = variant.image.url;
+        image.alt = variant.title;
+      }
       dropdownText.innerHTML = variant.title;
     });
 

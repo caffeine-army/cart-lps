@@ -99,6 +99,14 @@ Exemplo com todos os parâmetros (não da pra ter bump product e quantity ao mes
 }
 ```
 
+## Seletores na página
+
+Para adicionar seletores de variante direto na página (sem ser no carrinho), adicione a propriedade variants-wrapper a uma div, com o valor sendo o id do produto.
+ex:
+```
+<div variants-wrapper="999"></div>
+```
+
 ## DEV
 
 #### Instalar dependências

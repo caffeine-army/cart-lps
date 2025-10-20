@@ -9,6 +9,7 @@ import handleCookieBanner from "./modules/handleCookieBanner.js";
 import handleError from "./modules/handleError.js";
 import handleNoCartProducts from "./modules/handleNoCartProducts.js";
 import handlePurchase from "./modules/handlePurchase.js";
+import handleVariantsWrapper from "./modules/handleVariantsWrapper.js";
 import openCart from "./modules/openCart.js";
 import toggleLoading from "./modules/toggleLoading.js";
 import firePageLoad from "./modules/tripleWhale/firePageLoad.js";
@@ -31,6 +32,7 @@ const lpCart = async (properties) => {
     if (getData().some((prod) => !prod.availableForSale)) throw new Error(`Out of stock product`);
 
     createCart();
+    handleVariantsWrapper();
 
     const buttons = document.querySelectorAll("[cart-button]");
     buttons.forEach((button) => {
