@@ -6,7 +6,10 @@ const fetchProducts = async (productInfo) => {
   try {
     const response = await fetch(getApiEndpoint(), {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "X-Shopify-Storefront-Access-Token": "c28e8facd726992d4c88fe260c9e1af6"
+      },
       body: JSON.stringify({
         query: `{
             nodes(ids: [${productIds.map((id) => `"gid://shopify/Product/${id}"`)}]) {
